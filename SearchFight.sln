@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cignium.SearchFight", "src\Cignium.SearchFight\Cignium.SearchFight.csproj", "{F6C9F598-B41C-49C2-9A6D-E8D5BA7E7BEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cignium.SearchFight.Tests", "test\Cignium.SearchFight.Tests\Cignium.SearchFight.Tests.csproj", "{A42117F9-A8A7-43C7-8CFA-CDBBDDD00092}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{16DDF75C-DA96-4F4A-8DB8-4EB3573E9395}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A855894F-D5F8-41B2-859A-96547EA0FD38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cignium.SearchFight.Services", "src\Cignium.SearchFight.Services\Cignium.SearchFight.Services.csproj", "{688885CF-2B15-432A-A5A5-C09DD980AF35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cignium.SearchFight.Core", "src\Cignium.SearchFight.Core\Cignium.SearchFight.Core.csproj", "{33A8EA22-BA5B-4A31-B13A-8203CCA600FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6C9F598-B41C-49C2-9A6D-E8D5BA7E7BEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C9F598-B41C-49C2-9A6D-E8D5BA7E7BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6C9F598-B41C-49C2-9A6D-E8D5BA7E7BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6C9F598-B41C-49C2-9A6D-E8D5BA7E7BEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A42117F9-A8A7-43C7-8CFA-CDBBDDD00092}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A42117F9-A8A7-43C7-8CFA-CDBBDDD00092}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A42117F9-A8A7-43C7-8CFA-CDBBDDD00092}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A42117F9-A8A7-43C7-8CFA-CDBBDDD00092}.Release|Any CPU.Build.0 = Release|Any CPU
+		{688885CF-2B15-432A-A5A5-C09DD980AF35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{688885CF-2B15-432A-A5A5-C09DD980AF35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{688885CF-2B15-432A-A5A5-C09DD980AF35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{688885CF-2B15-432A-A5A5-C09DD980AF35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33A8EA22-BA5B-4A31-B13A-8203CCA600FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33A8EA22-BA5B-4A31-B13A-8203CCA600FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33A8EA22-BA5B-4A31-B13A-8203CCA600FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33A8EA22-BA5B-4A31-B13A-8203CCA600FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F6C9F598-B41C-49C2-9A6D-E8D5BA7E7BEC} = {16DDF75C-DA96-4F4A-8DB8-4EB3573E9395}
+		{A42117F9-A8A7-43C7-8CFA-CDBBDDD00092} = {A855894F-D5F8-41B2-859A-96547EA0FD38}
+		{688885CF-2B15-432A-A5A5-C09DD980AF35} = {16DDF75C-DA96-4F4A-8DB8-4EB3573E9395}
+		{33A8EA22-BA5B-4A31-B13A-8203CCA600FC} = {16DDF75C-DA96-4F4A-8DB8-4EB3573E9395}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD468717-4D40-4703-A80A-56081D30E056}
+	EndGlobalSection
+EndGlobal
