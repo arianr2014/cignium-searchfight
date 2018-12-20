@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Cignium.SearchFight.Core.Models;
@@ -13,7 +14,7 @@ namespace Cignium.SearchFight.Core.Impl
     {
         #region Attributes
         
-        private List<ISearchEngine> _searchEngines;
+        private IList<ISearchEngine> _searchEngines;
 
         #endregion
 
@@ -21,7 +22,22 @@ namespace Cignium.SearchFight.Core.Impl
                 
         public SearchManager()
         {
-            _searchEngines = new List<ISearchEngine>() { new GoogleSearch(), new BingSearch() };
+            _searchEngines = GetImplementedSearchEngines();
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        private IList<ISearchEngine> GetImplementedSearchEngines()
+        {            
+            IEnumerable<Assembly> loadedAssemblies = AppDomain.CurrentDomain.GetAssemblies()
+                ?.Where(assembly => assembly.FullName.StartsWith("Cignium.SearchFight"));
+
+            return loadedAssemblies
+                .SelectMany(assembly => assembly.GetTypes())
+                .Where(type => type.GetInterface(typeof(ISearchEngine).ToString()) != null)
+                .Select(type => Activator.CreateInstance(type) as ISearchEngine).ToList();
         }
 
         #endregion
