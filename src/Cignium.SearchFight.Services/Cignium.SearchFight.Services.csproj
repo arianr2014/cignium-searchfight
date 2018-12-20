@@ -33,7 +33,6 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,6 +52,12 @@
     <Compile Include="Models\Google\GoogleResponse.cs" />
     <Compile Include="Models\Google\SearchInformation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cignium.SearchFight.Shared\Cignium.SearchFight.Shared.csproj">
+      <Project>{9f841527-467b-4b50-a7f0-7dfaeeaf350c}</Project>
+      <Name>Cignium.SearchFight.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

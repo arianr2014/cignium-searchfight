@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cignium.SearchFight.Service
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cignium.SearchFight.Core", "src\Cignium.SearchFight.Core\Cignium.SearchFight.Core.csproj", "{33A8EA22-BA5B-4A31-B13A-8203CCA600FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cignium.SearchFight.Shared", "src\Cignium.SearchFight.Shared\Cignium.SearchFight.Shared.csproj", "{9F841527-467B-4B50-A7F0-7DFAEEAF350C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{33A8EA22-BA5B-4A31-B13A-8203CCA600FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33A8EA22-BA5B-4A31-B13A-8203CCA600FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33A8EA22-BA5B-4A31-B13A-8203CCA600FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F841527-467B-4B50-A7F0-7DFAEEAF350C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F841527-467B-4B50-A7F0-7DFAEEAF350C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F841527-467B-4B50-A7F0-7DFAEEAF350C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F841527-467B-4B50-A7F0-7DFAEEAF350C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{A42117F9-A8A7-43C7-8CFA-CDBBDDD00092} = {A855894F-D5F8-41B2-859A-96547EA0FD38}
 		{688885CF-2B15-432A-A5A5-C09DD980AF35} = {16DDF75C-DA96-4F4A-8DB8-4EB3573E9395}
 		{33A8EA22-BA5B-4A31-B13A-8203CCA600FC} = {16DDF75C-DA96-4F4A-8DB8-4EB3573E9395}
+		{9F841527-467B-4B50-A7F0-7DFAEEAF350C} = {16DDF75C-DA96-4F4A-8DB8-4EB3573E9395}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BD468717-4D40-4703-A80A-56081D30E056}

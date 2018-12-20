@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System.Web.Script.Serialization;
+using Cignium.SearchFight.Shared.Helpers;
 using Cignium.SearchFight.Services.Models;
 using Cignium.SearchFight.Services.Interfaces;
 using Cignium.SearchFight.Services.Models.Config;
@@ -14,7 +14,6 @@ namespace Cignium.SearchFight.Services.Impl
 
         public string Name => "Google";        
         private HttpClient _client { get; }
-        private JavaScriptSerializer _serializer { get; }        
 
         #endregion
 
@@ -23,13 +22,15 @@ namespace Cignium.SearchFight.Services.Impl
         public GoogleSearch()
         {
             _client = new HttpClient();
-            _serializer = new JavaScriptSerializer();
         }
 
         #endregion
 
         public async Task<long> GetTotalResultsAsync(string query)
         {
+            if (string.IsNullOrEmpty(query))
+                throw new ArgumentException("The specified parameter is invalid.", nameof(query));
+
             string searchRequest = GoogleConfig.BaseUrl.Replace("{Key}", GoogleConfig.ApiKey)
                 .Replace("{Context}", GoogleConfig.ContextId)
                 .Replace("{Query}", query);
@@ -39,7 +40,7 @@ namespace Cignium.SearchFight.Services.Impl
                 if (!response.IsSuccessStatusCode)
                     throw new Exception("We weren't able to process your request. Please try again later.");
 
-                GoogleResponse results = _serializer.Deserialize<GoogleResponse>(await response.Content.ReadAsStringAsync());
+                GoogleResponse results = JsonHelper.Deserialize<GoogleResponse>(await response.Content.ReadAsStringAsync());
                 return long.Parse(results.SearchInformation.TotalResults);
             }
         }

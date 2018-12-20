@@ -1,36 +1,28 @@
-﻿using System.Threading.Tasks;
+﻿using Cignium.SearchFight.Core.Impl;
+using Cignium.SearchFight.Core.Interfaces;
+using Cignium.SearchFight.Shared;
 using System.Collections.Generic;
-using Cignium.SearchFight.Services.Impl;
-using Cignium.SearchFight.Services.Interfaces;
+using System.Linq;
 
 namespace Cignium.SearchFight.Core
 {
     public class SearchContest
     {
-        private List<ISearchEngine> _searchEngines;
+        #region Attributes
+
+        private ISearchManager _searchManager;
+        private IWinnerManager _winnerManager;
+
+        #endregion
+
+        #region Constructors
 
         public SearchContest()
         {
-            _searchEngines = new List<ISearchEngine>() { new GoogleSearch(), new BingSearch() };
+            _searchManager = new SearchManager();
+            _winnerManager = new WinnerManager();
         }
 
-        public async Task<IList<Search>> GetSearchResults(IList<string> terms)
-        {
-            IList<Search> results = new List<Search>();
-
-            foreach (ISearchEngine engine in _searchEngines)
-            {
-                foreach (string term in terms)
-                {
-                    results.Add(new Search {
-                        SearchEngine = engine.Name,
-                        Term = term,
-                        Results = await engine.GetTotalResultsAsync(term)
-                    });
-                }
-            }
-
-            return results;
-        }
+        #endregion
     }
 }

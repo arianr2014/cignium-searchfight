@@ -47,7 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\SearchContestTest.cs" />
+    <Compile Include="Core\SearchManagerTest.cs" />
+    <Compile Include="Core\WinnerManagerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\BingSearchTest.cs" />
     <Compile Include="Services\GoogleSearchTest.cs" />
