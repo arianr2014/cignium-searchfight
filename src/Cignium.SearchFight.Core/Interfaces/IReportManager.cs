@@ -17,7 +17,7 @@ namespace Cignium.SearchFight.Core.Interfaces
         /// </summary>
         /// <param name="engineWinners">List with all the enabled search engine winner terms.</param>
         /// <returns>A string list with the winners report.</returns>
-        IList<string> GetWinnersReport(IList<SearchEngineWinner> engineWinners);
+        IList<string> GetWinnersReport(IEnumerable<SearchEngineWinner> engineWinners);
 
         /// <summary>
         /// Generate the report with the grand winner.

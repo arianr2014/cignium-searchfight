@@ -1,11 +1,11 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Cignium.SearchFight.Core.Models;
+using Cignium.SearchFight.Services.Impl;
 using Cignium.SearchFight.Core.Interfaces;
 using Cignium.SearchFight.Services.Interfaces;
-using Cignium.SearchFight.Services.Impl;
-using System.Linq;
 
 namespace Cignium.SearchFight.Core.Impl
 {

@@ -48,5 +48,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cignium.SearchFight.Core\Cignium.SearchFight.Core.csproj">
+      <Project>{33a8ea22-ba5b-4a31-b13a-8203cca600fc}</Project>
+      <Name>Cignium.SearchFight.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

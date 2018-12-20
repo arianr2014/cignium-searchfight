@@ -27,9 +27,9 @@ namespace Cignium.SearchFight.Core.Impl
                 .ToList();
         }
 
-        public IList<string> GetWinnersReport(IList<SearchEngineWinner> engineWinners)
+        public IList<string> GetWinnersReport(IEnumerable<SearchEngineWinner> engineWinners)
         {
-            if (engineWinners == null || engineWinners.Count == 0)
+            if (engineWinners == null || engineWinners.Count() == 0)
                 throw new ArgumentException("The specified parameter is invalid", nameof(engineWinners));
 
             List<string> results = new List<string>();
@@ -37,7 +37,7 @@ namespace Cignium.SearchFight.Core.Impl
             foreach (SearchEngineWinner winner in engineWinners)
             {
                 StringBuilder winnerBuilder = new StringBuilder();
-                winnerBuilder.Append(winner.Engine + ": ");
+                winnerBuilder.Append(winner.Engine + " winner : ");
                 winnerBuilder.Append(winner.Term);
                 results.Add(winnerBuilder.ToString());
             }
