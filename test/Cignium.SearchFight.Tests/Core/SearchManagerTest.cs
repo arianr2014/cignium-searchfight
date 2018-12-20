@@ -2,8 +2,8 @@
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using NUnit.Framework;
-using Cignium.SearchFight.Core;
 using Cignium.SearchFight.Core.Impl;
+using Cignium.SearchFight.Core.Models;
 using Cignium.SearchFight.Core.Interfaces;
 
 namespace Cignium.SearchFight.Tests.Core

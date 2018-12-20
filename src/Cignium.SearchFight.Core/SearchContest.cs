@@ -1,8 +1,5 @@
 ﻿using Cignium.SearchFight.Core.Impl;
 using Cignium.SearchFight.Core.Interfaces;
-using Cignium.SearchFight.Shared;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Cignium.SearchFight.Core
 {
@@ -12,6 +9,7 @@ namespace Cignium.SearchFight.Core
 
         private ISearchManager _searchManager;
         private IWinnerManager _winnerManager;
+        private IReportManager _reportManager;
 
         #endregion
 
@@ -21,7 +19,8 @@ namespace Cignium.SearchFight.Core
         {
             _searchManager = new SearchManager();
             _winnerManager = new WinnerManager();
-        }
+            _reportManager = new ReportManager();
+        }        
 
         #endregion
     }

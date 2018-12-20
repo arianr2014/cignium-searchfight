@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using Cignium.SearchFight.Shared;
+using Cignium.SearchFight.Core.Models;
 using Cignium.SearchFight.Core.Interfaces;
 
 namespace Cignium.SearchFight.Core.Impl

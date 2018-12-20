@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using System.Collections.Generic;
+using Cignium.SearchFight.Core.Models;
 
 namespace Cignium.SearchFight.Core.Interfaces
 {

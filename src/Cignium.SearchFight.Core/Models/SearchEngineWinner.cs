@@ -1,4 +1,4 @@
-﻿namespace Cignium.SearchFight.Core
+﻿namespace Cignium.SearchFight.Core.Models
 {
     public class SearchEngineWinner
     {
