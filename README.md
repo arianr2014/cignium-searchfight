@@ -24,13 +24,11 @@ Out of the box Cignium Search Fight implements the Google and Bing Search Engine
 Once you have them, in order for the application to work you have update the "Cignium.SearchFight.exe.config" file. You will need the following: 
 
 ```
-    <!-- Google Search Engine Settings -->
-    <add key="Google.BaseUrl" value="https://www.googleapis.com/customsearch/v1?key={Key}&amp;cx={Context}&amp;q={Query}" />
+    <!-- Google Search Engine Settings -->    
     <add key="Google.ApiKey" value="ADD_YOUR_GOOGLE_API_KEY_HERE" />
     <add key="Google.ContextId" value="ADD_YOUR_GOOGLE_CONTEXT_ID_HERE" />
 
-    <!-- Bing Search Engine Settings -->
-    <add key="Bing.BaseUrl" value="https://api.cognitive.microsoft.com/bing/v7.0/search?q={Query}" />
+    <!-- Bing Search Engine Settings -->    
     <add key="Bing.ApiKey" value="ADD_YOUR_BING_API_KEY_HERE" />
 ```
 
