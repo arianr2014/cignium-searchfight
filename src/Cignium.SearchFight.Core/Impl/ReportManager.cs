@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text;
 using System.Collections.Generic;
 using Cignium.SearchFight.Core.Models;
@@ -15,6 +16,16 @@ namespace Cignium.SearchFight.Core.Impl
         #endregion
 
         #region Public Methods
+
+        public IList<string> GetSearchResultsReport(IList<Search> searchData)
+        {
+            if (searchData == null || searchData.Count == 0)
+                throw new ArgumentException("The specified parameter is invalid", nameof(searchData));
+
+            return searchData.GroupBy(item => item.Term)
+                .Select(group => $"{group.Key}: {string.Join(" ", group.Select(item => $"{item.SearchEngine}: {item.Results}"))}")
+                .ToList();
+        }
 
         public IList<string> GetWinnersReport(IList<SearchEngineWinner> engineWinners)
         {
